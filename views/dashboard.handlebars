@@ -1,0 +1,23 @@
+{{#with usuario}}
+<h1>Dashboard de {{nome}}</h1>
+<hr>
+<p>Seus dados pessoais:</p>
+<p>Email: {{email}}</p>
+
+<p>CPF: {{cpf}}</p>
+
+<p>País: {{address.pais}}</p>
+
+<p>Estado: {{address.estado}}</p>
+
+<p>Município: {{address.municipio}}</p>
+<p>CEP: {{address.cep}}</p>
+<p>Rua: {{address.rua}}, Nº {{address.numero}}</p>
+<br>
+
+<a href="/editar/{{id}}"><button>Editar</button></a>
+<form action="/logout?_method=DELETE" method="post">
+    <button type="submit">Log out</button>
+</form>
+<div><a href="/deletar/{{id}}"><button>Deletar perfil</button></a></div>
+{{/with}}

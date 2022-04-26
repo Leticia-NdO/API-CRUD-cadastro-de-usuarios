@@ -1,0 +1,29 @@
+<h1>Editar perfil</h1>
+
+{{#with usuario}}
+
+<form action="/atualizar/{{id}}" method="POST">
+
+    <p>Nome: <input type="text" name="nome" value="{{nome}}"></p>
+    
+    <p>Email: <input type="text" name="email" value="{{email}}"></p>
+    
+    <p>CPF: <input type="text" name="cpf" value="{{cpf}}"></p>
+    
+    <p>País: <input type="text" name="pais" value="{{address.pais}}"></p>
+    
+    <p>Estado: <input type="text" name="estado" value="{{address.estado}}"></p>
+    
+    <p>Município: <input type="text" name="municipio" value="{{address.municipio}}"></p>
+    
+    <p>CEP: <input type="text" name="cep" value="{{address.cep}}"></p>
+    
+    <p>Rua: <input type="text" name="rua" value="{{address.rua}}"></p>
+    
+    <p>Número: <input type="text" name="numero" value="{{address.numero}}"></p>
+    
+
+    <button type="submit">Atualizar cadastro</button>
+    <a href="/dashboard"><button>Voltar</button></a>
+</form>
+{{/with}}
